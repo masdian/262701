@@ -1,0 +1,59 @@
+# Chapter 2: Advanced Topics
+
+This is the second chapter. Continue building your book with more chapters.
+
+## Mathematical Equations
+
+You can include mathematical equations using LaTeX syntax:
+
+Inline equation: $E = mc^2$
+
+Display equation:
+
+$$
+\int_{-\infty}^{\infty} e^{-x^2} dx = \sqrt{\pi}
+$$
+
+## Tables
+
+| Column 1 | Column 2 | Column 3 |
+|----------|----------|----------|
+| Data 1   | Data 2   | Data 3   |
+| Data 4   | Data 5   | Data 6   |
+
+: Example table caption {#tbl-example}
+
+## Figures
+
+You can create figures using R code chunks. For example, @fig-example shows the relationship between car weight and fuel efficiency.
+
+```{r}
+#| label: fig-example
+#| fig-cap: "Relationship between weight and miles per gallon"
+#| code-fold: true
+
+library(ggplot2)
+ggplot(mtcars, aes(x = wt, y = mpg)) +
+  geom_point() +
+  geom_smooth(method = "lm") +
+  theme_minimal() +
+  labs(x = "Weight (1000 lbs)", y = "Miles per Gallon")
+```
+
+## Callouts
+
+::: {.callout-note}
+This is a note callout. Use it to highlight important information.
+:::
+
+::: {.callout-tip}
+This is a tip callout. Share helpful suggestions with your readers.
+:::
+
+::: {.callout-warning}
+This is a warning callout. Alert readers to potential issues.
+:::
+
+::: {.callout-important}
+This is an important callout. Emphasize critical information.
+:::
